@@ -87,7 +87,7 @@ var LightFace = new Class({
 				cell.className = cssClass;
 				if (cssClass == 'centerCenter') {
 					this.contentBox = new Element('div',{
-						'class': 'lightfaceContent',
+						'class': this.options.baseClass+'Content',
 						styles: {
 							width: this.options.width
 						}
@@ -103,19 +103,19 @@ var LightFace = new Class({
 		//draw title
 		if(this.options.title) {
 			this.title = new Element('h2',{
-				'class': 'lightfaceTitle',
+				'class': this.options.baseClass+'Title',
 				html: this.options.title
 			}).inject(this.contentBox);
 			if(this.options.draggable && window['Drag'] != null) {
 				this.draggable = true;
 				new Drag(this.box,{ handle: this.title });
-				this.title.addClass('lightfaceDraggable');
+				this.title.addClass(this.options.baseClass+'Draggable');
 			}
 		}
 		
 		//draw message box
 		this.messageBox = new Element('div',{
-			'class': 'lightfaceMessageBox',
+			'class': this.options.baseClass+'MessageBox',
 			html: this.options.content || '',
 			styles: {
 				height: this.options.height
@@ -124,7 +124,7 @@ var LightFace = new Class({
 		
 		//button container
 		this.footer = new Element('div',{
-			'class': 'lightfaceFooter',
+			'class': this.options.baseClass+'Footer',
 			styles: {
 				display: 'none'
 			}
@@ -136,7 +136,7 @@ var LightFace = new Class({
 			styles: {
 				opacity: 0
 			},
-			'class': 'lightfaceOverlay',
+			'class': this.options.baseClass+'Overlay',
 			tween: {
 				link: 'chain',
 				duration: this.options.fadeDuration,
@@ -166,9 +166,9 @@ var LightFace = new Class({
 	// Manage buttons
 	addButton: function(title,clickEvent,color) {
 		this.footer.setStyle('display','block');
-		var focusClass = 'lightfacefocus' + color;
+		var focusClass = this.options.baseClass+'focus' + color;
 		var label = new Element('label',{
-			'class': color ? 'lightface' + color : '',
+			'class': color ? this.options.baseClass + color : '',
 			events: {
 				mousedown: function() {
 					if(color) {
