@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
-
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -50,9 +49,9 @@
     </rdf:RDF>
   </metadata>
   <g
-     inkscape:label="Capa 1"
+     inkscape:label="Corners"
      inkscape:groupmode="layer"
-     id="layer1"
+     id="cornersDarkFaceBorder"
      transform="translate(0,-1032.3622)">
     <rect
        style="fill:#000000;fill-opacity:0.98039215999999996;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -62,18 +61,18 @@
        x="1.1799147"
        y="1032.8497"
        ry="6.2055697"
-       inkscape:export-filename="/home/fitorec/codes/mygit/LightFace/Assets/dark/corners.png"
+       inkscape:export-filename="corners.png"
        inkscape:export-xdpi="87.804878"
        inkscape:export-ydpi="87.804878" />
     <rect
        style="fill:#000000;fill-opacity:0.98039216;stroke:none"
-       id="rect2983"
+       id="backgroundDarkFaceBorder"
        width="17"
        height="16"
        x="21.37339"
        y="1034.0616"
        ry="0"
-       inkscape:export-filename="/home/fitorec/codes/mygit/LightFace/Assets/dark/b.png"
+       inkscape:export-filename="b.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
   </g>
