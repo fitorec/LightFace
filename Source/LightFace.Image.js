@@ -55,7 +55,7 @@ LightFace.Image = new Class({
 		var currentDimensions = { x: '', y: '' };
 		if(this.image) currentDimensions = this.image.getSize();
 		///empty the content, show the indicator
-		this.messageBox.set('html','').addClass('lightFaceMessageBoxImage').setStyles({
+		this.messageBox.set('html','').addClass(this.options.baseClass+'MessageBoxImage').setStyles({
 			width: currentDimensions.x,
 			height: currentDimensions.y
 		});
@@ -77,7 +77,7 @@ LightFace.Image = new Class({
 					this.fireEvent('error');
 					this.image.destroy();
 					delete this.image;
-					this.messageBox.set('html',this.options.errorMessage).removeClass('lightFaceMessageBoxImage');
+					this.messageBox.set('html',this.options.errorMessage).removeClass(this.options.baseClass+'MessageBoxImage');
 				}.bind(this),
 				click: function() {
 					this.close();
