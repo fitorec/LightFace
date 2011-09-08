@@ -76,6 +76,7 @@
 	background-color: #111;
 	background: -moz-linear-gradient(100% 100% 90deg, #111111, #333333);
 	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#111111), to(#333333));
+	text-shadow: none;
 	border: 1px solid #000000;
 	font-weight: bold;
 	margin: -1px;
